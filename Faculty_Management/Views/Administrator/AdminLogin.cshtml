@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Administrator Index";
+    Layout = "~/Views/Shared/_LayoutAdminSignIn.cshtml";
+}
+
+<style>
+    h1 {
+        color: black;
+    }
+
+    .buttons {
+        align-items: center;
+        font-size: 25px;
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+
+    body {
+        background-repeat: no-repeat;
+    }
+</style>
+<h1> Welcome Administrator</h1>
+<br />
+<br />
+@if (TempData["AlertMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["AlertMessage"]
+    </div>
+}
+<div class="buttons">
+    <div class="container1">
+        <a class="btn-info">@Html.ActionLink("Add Faculty", "CreateFaculty", "Administrator")</a>
+        <br />
+        <br />
+        <a class="btn-info">@Html.ActionLink("Add Department", "CreateDepartment", "Administrator")</a>
+        <br />
+        <br />
+        <a class="btn-info">@Html.ActionLink("Add Designation", "CreateDesignation", "Administrator")</a>
+    </div>
+    <div class="container2">
+        <a class="btn-info">@Html.ActionLink("Delete Faculty", "DeleteFaculty", "Administrator")</a>
+        <br />
+        <br />
+        @*<a class="btn-info">@Html.ActionLink("Delete Department", "DeleteDepartment", "Administrator")</a>
+        <br />
+        <br />*@
+        <a class="btn-info">@Html.ActionLink("Search Faculty By Department", "SearchByDept", "Administrator")</a>
+        <br />
+        <br />
+        <a class="btn-info">@Html.ActionLink("See Deleted Faculty", "ViewDeletedFaculty", "Administrator")</a>
+    </div>
+</div>

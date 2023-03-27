@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Faculty_Management.Models.Publication>
+
+@{
+    ViewBag.Title = "ViewPublication";
+    Layout = "~/Views/Shared/_LayoutAfterSignIn.cshtml";
+}
+
+<h2>View Publication</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PublicationTiltle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ArticleName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PublisherName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PublicationLocation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Faculty.Name)
+        </th>
+        <th></th>
+    </tr>
+@if(Model != null) {
+        foreach (var item in Model)
+        {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PublicationTiltle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ArticleName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PublisherName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PublicationLocation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Faculty.Name)
+        </td>
+        
+    </tr>
+        }
+ }
+
+</table>

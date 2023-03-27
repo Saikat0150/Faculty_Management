@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h1>Welcome User!</h1>
+<br />
+<br />
+<style>
+    body {
+        background-repeat: no-repeat;
+    }
+
+    h1 {
+        color: black;
+    }
+
+    .box {
+        font-size: 22px;
+    }
+</style>
+<div class="box">
+    <a class="btn-info">@Html.ActionLink("View Departments", "ViewDepartments", "Home")</a>
+    <br />
+    <br />
+    <a class="btn-info">@Html.ActionLink("View Publications", "ViewPublications", "Home")</a>
+    <br />
+    <br />
+    <a class="btn-info">@Html.ActionLink("Search Faculty By Department", "SearchByDept", "Administrator")</a>
+</div>

@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "FacultyLogin";
+    Layout = "~/Views/Shared/_LayoutAfterSignIn.cshtml";
+}
+<style>
+    h1 {
+        color: black;
+    }
+
+    .buttons {
+        font-size: 25px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+
+    body {
+        background-repeat: no-repeat;
+    }
+</style>
+<h1>Welcome Faculty!</h1>
+<br />
+<br />
+<div class="buttons">
+    <div class="container1">
+        <a class="btn-info">@Html.ActionLink("Add Publications", "CreatePublications", "Faculty")</a>
+        <br />
+        <br />
+        <a class="btn-info">@Html.ActionLink("View Publications", "ViewPublication", "Faculty")</a>
+    </div>
+    <div class="container2">
+        <a class="btn-info">@Html.ActionLink("Update Personal Information", "UpdateFacultyInfo", "Faculty")</a>
+        <br />
+        <br />
+        <a class="btn-info">@Html.ActionLink("Update Publications", "UpdatePublications", "Faculty")</a>
+    </div>
+</div>
